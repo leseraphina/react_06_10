@@ -1,14 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-// import Effec01 from './effect/effect01'
-// import Effec02 from './effect/effect02'
-import Effec03 from './effect/effect03'
-
+import Sec01 from './component/sec01'
+import Sec02 from './component/sec02'
 
 function App(){
   return (
     <div>
-      <Effec03 title="welcome" />
+      <Sec01 />
+      <Sec02 />
     </div>
   )
 }

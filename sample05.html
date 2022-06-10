@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>state : class1</title>
+</head>
+<body>
+
+  <div id="root"></div>
+
+  <script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <script type="text/babel">
+   class App extends React.Component{
+    //  state -> 객체형 설정
+    state = {count : 0}
+    // render
+    render(){
+      return (
+        <div>
+          <p>카운터 : {this.state.count}</p>
+          <p>
+           <button 
+            onClick={
+              ()=>{
+                // 객체방식
+                this.setState({count:this.state.count+1})
+              }
+            }
+            >click</button> 
+          </p>
+        </div>
+      )
+    }
+   }
+
+
+    const root = document.querySelector('#root');
+    ReactDOM.render(
+      <App />, root
+    )
+  </script>
